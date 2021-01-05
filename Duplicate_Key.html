@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Duplicate_Key</title>
+</head>
+<body>
+    <script>
+        const str='achieversit';
+        function howManyRepeated(str)
+        {
+  const result = [];
+  const strArr = str.toLowerCase().split("").sort().join("").match(/(.)\1+/g);
+  
+  if (strArr != null)
+   {
+    strArr.forEach((elem) => 
+    {
+      result.push(elem[0]);
+    });
+  } 
+   return result;
+   
+}
+document.write(...howManyRepeated(str));
+
+    </script>
+</body>
+</html>
